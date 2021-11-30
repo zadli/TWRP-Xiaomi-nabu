@@ -4,14 +4,14 @@
 #
 # SPDX-License-Identifier: Apache-2.0
 #
-
 LOCAL_PATH := device/xiaomi/nabu
+
+# define hardware platform
+PRODUCT_PLATFORM := nabu
+
 # A/B support
 AB_OTA_UPDATER := true
 
-# A/B updater updatable partitions list. Keep in sync with the partition list
-# with "_a" and "_b" variants in the device. Note that the vendor can add more
-# more partitions to this list for the bootloader and radio.
 AB_OTA_PARTITIONS += \
     boot \
     dtbo \
@@ -44,17 +44,11 @@ AB_OTA_POSTINSTALL_CONFIG += \
 
 # Boot control HAL
 PRODUCT_PACKAGES += \
-    android.hardware.boot@1.0-impl \
-    android.hardware.boot@1.0-service
-
-PRODUCT_PACKAGES += \
-    bootctrl.msmnile
-
-#PRODUCT_STATIC_BOOT_CONTROL_HAL := \
-#    bootctrl.msmnile \
-#    libgptutils \
-#    libz \
-#    libcutils
+    android.hardware.boot@1.1-impl-qti \
+    android.hardware.boot@1.1-impl-qti.recovery \
+    android.hardware.boot@1.1-service \
+    bootctrl.$(PRODUCT_PLATFORM) \
+    bootctrl.$(PRODUCT_PLATFORM).recovery \
 
 # Dynamic partitions
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
