@@ -14,13 +14,12 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 # Inherit from nabu device
 $(call inherit-product, device/xiaomi/nabu/device.mk)
 
-# Inherit some common Omni stuff.
+# Inherit some common twrp stuff.
 $(call inherit-product, vendor/twrp/config/common.mk)
-#$(call inherit-product, vendor/omni/config/gsm.mk)
 
 # Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := nabu
-PRODUCT_NAME := omni_nabu
+PRODUCT_NAME := twrp_nabu
 PRODUCT_BRAND := Xiaomi
 PRODUCT_MODEL := 21051182C
 PRODUCT_MANUFACTURER := xiaomi
