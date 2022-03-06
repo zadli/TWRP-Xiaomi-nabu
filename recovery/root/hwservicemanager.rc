@@ -1,12 +1,9 @@
+on init
+    start hwservicemanager
+
 service hwservicemanager /system/bin/hwservicemanager
-    user system
-    disabled
-    group system readproc
-    critical
+    user root
+    group root
     onrestart setprop hwservicemanager.ready false
-    onrestart class_restart main
-    onrestart class_restart hal
-    onrestart class_restart early_hal
-    writepid /dev/cpuset/system-background/tasks
-    class animation
-    shutdown critical
+    disabled
+    seclabel u:r:recovery:s0
