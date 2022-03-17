@@ -44,7 +44,7 @@ AB_OTA_UPDATER := true
 TW_INCLUDE_REPACKTOOLS := true
 
 # Kernel
-BOARD_KERNEL_CMDLINE := 
+BOARD_KERNEL_CMDLINE := androidboot.selinux=permissive
 TARGET_PREBUILT_KERNEL := $(DEVICE_PATH)/prebuilt/Image.gz-dtb
 BOARD_BOOTIMG_HEADER_VERSION := 3
 BOARD_KERNEL_IMAGE_NAME := Image.gz-dtb
