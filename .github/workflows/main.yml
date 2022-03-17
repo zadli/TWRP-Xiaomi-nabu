@@ -8,7 +8,7 @@ on:
      - main
 
 env:
-  MANIFEST: git://github.com/minimal-manifest-twrp/platform_manifest_twrp_aosp.git -b twrp-11
+  MANIFEST: https://github.com/minimal-manifest-twrp/platform_manifest_twrp_aosp.git -b twrp-11
   DEVICE: nabu
   DT_LINK: https://github.com/zadli/TWRP-Xiaomi-nabu -b main
   DT_PATH: device/xiaomi/nabu
